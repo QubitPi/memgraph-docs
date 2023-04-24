@@ -6,9 +6,14 @@ on:
       - master
 
 jobs:
+  test:
+    uses: ./.github/workflows/test-deploy.yml
+    secrets: inherit
+
   deploy:
     name: Deploy to GitHub Pages
-    runs-on: [self-hosted, Linux, X64, Ubuntu20.04]
+    needs: test
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3

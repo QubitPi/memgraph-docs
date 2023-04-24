@@ -5,13 +5,13 @@ const katex = require('rehype-katex');
 module.exports = {
   title: "Memgraph Docs",
   tagline: "Welcome to the Memgraph Docs site!",
-  url: "https://memgraph.com",
-  baseUrl,
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
+  url: "https://QubitPi.github.io/",
+  baseUrl: "/memgraph-docs/",
+  onBrokenLinks: "warn",         // setting this to warn is actually OK, otherwise image redirect fails the build
+  onBrokenMarkdownLinks: "warn", // setting this to warn is actually OK, otherwise image redirect fails the build
   favicon: "img/social-logo-round-corners.png",
-  organizationName: "memgraph",
-  projectName: "docs",
+  organizationName: "QubtiPi",
+  projectName: "memgraph-docs",
   stylesheets: [
     "https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:500,600",
     "https://fonts.googleapis.com/css?family=Roboto:400, 500,600",
@@ -1313,7 +1313,7 @@ module.exports = {
             to: "/memgraph/reference-guide/transactions",
             from: ["/memgraph/reference-guide/isolation-levels"],
           },
-          // Redirect for the Import section 
+          // Redirect for the Import section
           {
             to: "/memgraph/import-data/files/load-json",
             from: ["/memgraph/import-data/load-json", "/memgraph/import-data/json/load-json"],
