@@ -328,6 +328,7 @@ module.exports = {
             },
           ],
         },
+        {to: 'blog', label: 'Blog', position: 'left'},
         {
           type: "docsVersionDropdown",
           docsPluginId: "memgraph",
